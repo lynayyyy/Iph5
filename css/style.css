@@ -1,0 +1,179 @@
+body{
+    background-color: #fff;
+}
+.top{
+    width: 100%;
+    overflow: hidden;
+}
+.top img{
+    width: 100%;
+}
+.tips{
+    width: 100%;
+}
+.tips span{
+    display: block;
+    text-align: center;
+    font-size: .95rem;
+    color: rgb(242, 15, 15);
+    margin: .1rem;
+}
+.text{
+    width: 100%;
+}
+.text p{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    color: rgb(139, 134, 134);
+    font-size: 1.25rem;
+}
+.text  span{
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: .5rem;
+    color: rgb(98, 97, 97);
+    margin: .3rem auto;
+}
+.main{
+    width: 100%;
+    height: 100%;
+   
+}
+.main .ipt{
+    width: 95%;
+    height: 40px;
+    margin: .75rem 2.5%;
+    border-bottom: 3px solid #ccc;
+    padding-bottom: 10px;
+    display: flex;
+    line-height: 30px;
+    align-content: center;
+}
+.main .ipt label{
+    width: 30%;
+}
+.main .ipt input{
+    width: 70%;
+    border: none;
+    outline: none;
+}
+.main .ipt .ipt1{
+    width: 40%;
+    border: none;
+    outline: none;
+    
+}
+.main .ipt .ipt2{
+    width: 28%;
+    margin: 0 1%;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 7.5px 0;
+    background-color: blue;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 20px;
+}
+.main .ipt select{
+    width: 70%;
+    border: none;
+    outline: none;
+}
+.main .list{
+    width: 95%;
+    margin: 5px auto;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+   
+}
+.main .list label{
+    width: 100%;
+    margin: 5px auto;
+}
+.main .list .sex_list,
+.main .list .house_list,
+.main .list .car_list,
+.main .list .bx_list,
+.main .list .gjj_list,
+.main .list .sb_list,
+.main .list .ye_list{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    
+}
+.main .list .sex_list span,
+.main .list .house_list span,
+.main .list .car_list span,
+.main .list .bx_list span,
+.main .list .gjj_list span,
+.main .list .sb_list span,
+.main .list .ye_list span{
+    display: block;
+    width: 80%;
+    margin: 5px 10%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgb(242, 242, 242);
+    border-radius: 8px;
+}
+.main .list .sex_list .ac,
+.main .list .house_list .ac,
+.main .list .car_list .ac,
+.main .list .bx_list .ac,
+.main .list .gjj_list .ac,
+.main .list .sb_list .ac,
+.main .list .ye_list .ac{
+    background-color: rgb(127, 182, 255);
+}
+.main .list .city_list{
+    width: 95%;
+    margin: 5px auto;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.main  .city_list label{
+  width: 100%;
+}
+/* .main .city_list select{
+    width: 100%;
+    border: none;
+    padding: 10px 0;
+    outline: none;
+} */
+.main .list  select{
+    width: 100%;
+    border: none;
+    padding: 10px 0;
+    outline: none;
+
+}
+.main .btn{
+    width: 100%;
+    margin: 5px auto;
+}
+.main .btn button{
+    width: 100%;
+    padding: 10px 0;
+    background-color: blue;
+    border: none;
+    color: #fff;
+    outline: none;
+    border-radius: 25px;
+}
+.main .ftips{
+    width: 100%;
+    text-align: center;
+}
+.main .ftips span{
+    color: #ff9e01;
+}
+.main .tips{
+    width: 100%;
+    text-align: center;
+    font-size: .75rem;
+    color: blue;
+}

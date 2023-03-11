@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大额信用贷</title>
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./js/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css?v='2010221'">
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+    <script src="./js/index.js?v='20110123132155'"></script>
+    <script src="./js/layer_mobile/layer.js"></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=CoiggrPeSyLfenXVKOueP1VwmEuUV39y"></script>
+    <!-- <script src="./js/cityjson.js?v=2001"></script> -->
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="top">
+                <img src="./images/top.jpg?v='2001'" alt="">
+            </div>
+            <div class="tips">
+                <span>申请后会有客服1对1提供电话咨询服务，请注意接听来电</span>
+                <span>请认真，正确的填写下方表单，会增加您贷款的成功率</span>
+            </div>
+            <div class="main">
+                <div class="ipt">
+                    <label>姓名</label>
+                    <input type="text" placeholder="请输入您的真实姓名" id="name">
+                </div>
+                <div class="ipt">
+                    <label>手机号</label>
+                    <input type="number" placeholder="请输入您的手机号" id="mobile">
+                </div>
+                <div class="ipt">
+                    <label>验证码</label>
+                    <input class="ipt1" type="text" placeholder="请输入验证码" id="code">
+                    <input id="btnSendCode1" type="button" class="ipt2"  value="获取验证码" onClick="sendMessage()" />
+                </div>
+                <div class="ipt">
+                    <label>您需贷</label>
+                        <select name="" id="money">
+                            <option value="">请选择贷款金额</option>
+                            <option value="0-5万">0-5万</option>
+                            <option value="5-10万">5-10万</option>
+                            <option value="10-15万">10-15万</option>
+                            <option value="15-20万">15-20万</option>
+                            <option value="20-30万">20-30万</option>
+                            <option value="30-50万">30-50万</option>
+                            <option value="50万以上">50万以上</option>
+                        </select>
+                </div>
+
+                <div class="tips">
+                    <p>完善以下信息有助于您的贷款咨询</p>
+                </div>
+                <div class="list">
+                    <label >城市</label>
+                    <select class="city" id="city">
+                        <option value="" id="modeCity"></option>
+                        <option value="北京">北京</option>
+                        <option value="济南">济南</option>
+                        <option value="杭州">杭州</option>
+                        <option value="苏州">苏州</option>
+                    </select>
+                </div>
+                <div class="list">
+                    <label>商业保险</label>
+                    <select  id="baodan_is">
+                        <option value="">请选择商业保险年缴费总额</option>
+                        <option value="0元-3千元">0元-3千元</option>
+                        <option value="3千元-8千元">3千元-8千元</option>
+                        <option value="8千元-2万元">8千元-2万元</option>
+                        <option value="2万元-4万元">2万元-4万元</option>
+                        <option value="4万元以上">4万元以上</option>
+                    </select>
+                </div>
+                <div class="list">
+                    <label>公积金</label>
+                    <select  id="gongjijin">
+                        <option value="">请选择公积金缴纳时长</option>
+                        <option value="未缴纳">未缴纳</option>
+                        <option value="0-6个月">0-6个月</option>
+                        <option value="6个月-1年">6个月-1年</option>
+                        <option value="1年-3年">1年-3年</option>
+                        <option value="3年-5年">3年-5年</option>
+                        <option value="5年-10年">5年-10年</option>
+                        <option value="10年以上">10年以上</option>
+                    </select>
+                </div>
+                <div class="btn">
+                    <button onclick="sub()">立即申请</button>
+                </div>
+                <div class="ftips">
+                <input type="checkbox" name="isshow" id="isshow">我已阅读并同意<span data-toggle="modal" data-target="#myModal"><<个人信息与隐私保护条款>></span>
+                </div>
+            </div>
+            <div class="top">
+                <img src="./images/footer1.png?v='2001'" alt="">
+                <img src="./images/footer2.png?v='2001'" alt="">
+            </div>
+            <div class="text">
+                <p>温馨提示</p>
+                <span>贷款有风险，借款需谨慎</span>
+                <span>请根据个人能力合理借贷，理性消费，避免逾期</span>
+                <span>贷款额度，利率，放款时间以实际审批结果为准</span>
+            </div>
+            <div class="text">
+                <p>合作机构</p>
+                <span>建设银行   平安银行</span>
+            </div>
+            <div class="text">
+                <p>综合年化利率3.75%-24.00%</p>
+                <span>银树数字科技有限公司及关联公司仅提供咨询</span>
+            </div>
+            <div class="text">
+                <p>银树数字科技(青岛)有限公司</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">个人信息与隐私保护条款</h4>
+            </div>
+            <div class="modal-body">【银树数字科技（青岛）有限公司】（下称：我们）非常重视用户信息的保护。您在使用我们提供的贷款咨询服务时，我们可能会收集和使用您的相关信息。我们希望通过本声明向您说明在适用于具体的留资场景时我们如何收集、使用、共享、保护您的信息，以进一步保障您的信息安全和为您提供更具个性化的优质服务。在使用我们的留资服务（以下简称“服务”），并在相应页面填写相关信息前，请您务必仔细阅读本声明。您一旦主动在相应页面填写信息并进行提交操作，即意味着您同意我们按照本声明收集、使用、共享您的相关信息 一、个人信息的收集 1、我们提供贷款咨询服务时，可能会收集您的姓名、手机号。请您注意，具体需要填写的信息可能会根据我们提供的产品/服务的不同而有所差异，请以届时向您展示的服务以及所对应的要求填写相关个人信息，但我们会在下文向您说明我们可能收集的全部个人信息的收集和使用规则。 2、您需要注意的是，以上个人信息均是您自愿提供。您有权拒绝提供，但可能无法正常使用相应的服务、功能或者无法达到服务拟达到的效果。 3、对于不满 18 岁的用户，须在其监护人陪同未成年人用户已经阅读和理解本声明并且许可的情况下向我们提交相关个人信息 二、个人信息的使用和共享 1、您同意，我们可以通过以下方式对个人信息进行使用和共享：①为了保障你能正常使用由【银树数字科技（青岛）有限公司】及我们的关联方 【北京华明汇财金融服务外包有限公司】、【山东融代信息咨询有限公司】、【杭州坚毅商务咨询有限公司】、【北京中澜海阔集团有限公司】、【北京引时金融服务外包有限公司】、【苏州融易诚信息咨询有限公司】、【北京华明汇财金融服务外包有限公司旗下的其他加盟店、直营店、协议合作机构等】（简称：关联方） 提供的贷款咨询服务，或为保障使用安全、或进行必要的产品使用分析，我们可能会收集使用或者与上述各方共享所必需的信息（例如您使用服务提交的表单信息和相关日志信息）； ②我们接受您留资所对应的相关业务客户的委托，向其共享您在表单中主动提供的信息，并由其在合法正当以及您已经向其授权的范围内使用（例如与您及时进行联络）。此外，为保证您获得更好的服务体验，我们可能会与前述客户共享难以识别您个人身份的必要的用户画像标签信息并由其在合法正当的范围内使用（例如促使相关联络内容、联络时间更符合您的要求）； ③我们和关联公司为满足您的需求，可能通过您提供的信息与您联系； ④我们和关联方可能定期或不定期向您发送有关产品、服务或相关活动的信息； ⑤经您授权同意后，您已知晓并同意在您下次浏览落地页面时，我们可能会帮您预先填写您上次输入的历史信息以提升您的使用体验，且只有您点击提交按钮之后才会传输给关联方。若您拒绝使用预填充功能，或者拟撤回使用预填充功能的授权，您可以根据产品所提供的功能进行。但也请您注意，您一旦拒绝或撤回授权，您将无法使用预填充功能，但您仍然可以主动输入相关信息并继续使用我们的产品/服务。 ⑥基于我们与通信运营商的合作，当您点击“使用本机号码”时，经过您的明示同意，运营商会将您的手机号码发送给我们，便于我们为您提供快捷提交服务。您也可以自主选择手动填写手机号码的方式提交。 ⑦如您拟撤回授权/删除您提交的个人信息的，您可以通过APP内用户反馈入口与我们联系，我们将尽快配合处理，如相关客户在您撤回授权或申请删除前已经获得了您的相关信息，我们会敦促其响应您的诉求并要求其删除您的相关信息。 2、我们将严格保护您的个人信息安全。我们将采用适当制度、安全技术和程序等措施来保护您的个人信息不被未经授权的访问、使用或泄漏。我们亦将促使本声明所述各接收和使用方尽力保护和不予泄露您的个人信息。 3、我们将要求并敦促个人信息接收方遵循本声明和法律法规的规定，谨慎使用其接收到的个人信息，如其发生超越本声明范围使用您的个人信息，进而侵害您合法权益的情形，我们将协助您追究该接收方的法律责任。 三、适用法律 1、本声明适用中华人民共和国法律。 2、如果您对信息保护问题有任何疑问或选择取消授权的，您可以通过APP/H5页面内的反馈入口联系我们。 四、变更 我们会适时对本声明进行修订，该等修订构成本声明的一部分。公司（即【银树数字科技（青岛）有限公司】）会将修改后的声明予以发布。在该种情况下，若您继续使用我们的服务，即表示同意接受经修订的声明的约束。</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+</body>
+
+</html>
